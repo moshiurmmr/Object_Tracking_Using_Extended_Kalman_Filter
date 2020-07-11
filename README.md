@@ -62,7 +62,7 @@ In this file the Kalman filter is put into action.
 - it reads the LASER measurement data from the file "obj_pose-laser-radar-synthetic-input.txt"
 - for each measurement it tracks the pedestrian location
 
-### How to use the project
+## 3. How to use the project
 Running the project is very straight forward:
 - first, colne the project
 $git clone https://github.com/moshiurmmr/Object_Tracking_Using_Extended_Kalman_Filter.git
