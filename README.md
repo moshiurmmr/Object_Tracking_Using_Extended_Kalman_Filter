@@ -65,11 +65,12 @@ In this file the Kalman filter is put into action.
 ## 3. How to use the project
 Running the project is very straight forward:
 - first, colne the project
-$git clone https://github.com/moshiurmmr/Object_Tracking_Using_Extended_Kalman_Filter.git
+
+  $git clone https://github.com/moshiurmmr/Object_Tracking_Using_Extended_Kalman_Filter.git
 
 - then run the main.cpp file. In a Linux platform
 
-$g++ main.cpp
+  $g++ main.cpp
 
 - it should also run in any IDE. I have tried it in Visual Studio and it worked fine.
 - *this project has been tested only in Ubuntu 18.04 LTS platform*
