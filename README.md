@@ -45,6 +45,28 @@ the new LASER measurement.
 The corresponding header file, kalman_filter.h declares the KalmanFilter class with its functions and parameters.
 
 ### tracking.cpp
-This file implements the tracking class. Using a constructor it initializes the state vector x_, covariance matrix P_,
-measurement matrix H_, 
+This file implements the tracking class. 
+- Using a constructor it initializes the state vector x_, covariance matrix P_,
+measurement matrix H_, measurement covariance matrix R_, transition matrix F_ and acceleration nose components
+noise_ax, noise_ay.
+- ProcessMeasurement() function processes a single measurement. It initializes the state vector x_ if it is not initialized. 
+Otherwise, it updates the transition matrix F_ with the elapsed time between the previous and current timestamps. It then
+updates the process covariance matrix Q_ time and noise information.
 
+### measurement_package.h
+It creates the MeasurementPackage class with sensor type (RADAR and LASER) information. In this project only LASER 
+measurement is used.
+
+### main.cpp
+In this file the Kalman filter is put into action.
+- it reads the LASER measurement data from the file "obj_pose-laser-radar-synthetic-input.txt"
+- for each measurement it tracks the pedestrian location
+
+### How to use the project
+Running the project is very straight forward:
+- first, colne the project
+$git clone https://github.com/moshiurmmr/Object_Tracking_Using_Extended_Kalman_Filter.git
+- then run the main.cpp file. In a Linux platform.
+$g++ main.cpp
+- it should also run in any IDE. I have tried it in Visual Studio and it worked fine.
+- *this project has been tested only in Ubuntu 18.04 LTS platform*
